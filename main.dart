@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     Text(
-      'Gabriel de Amorim',
+      'Luiz Antunes',
        textDirection: TextDirection.ltr,
        style: TextStyle(
         color: Colors.white,
