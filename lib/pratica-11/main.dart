@@ -25,8 +25,14 @@ class Home extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                          DescricaoFoto('sei lá', 'tnm sei lá'),
+                      builder: (context) => DescricaoFoto(
+                        'Nova York, EUA',
+                        'A cidade de Nova York compreende 5 distritos situados' +
+                            ' no encontro do rio Hudson com o Oceano Atlântico. ' +
+                            'No centro da cidade fica Manhattan, um distrito com ' +
+                            'alta densidade demográfica que está entre os principais' +
+                            ' centros comerciais, financeiros e culturais do mundo (Wikipedia).',
+                      ),
                     ),
                   );
                 },
@@ -187,18 +193,35 @@ class DescricaoFoto extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(this.cidade),
+        backgroundColor: Colors.green,
       ),
       body: Center(
         child: Column(
           children: [
             Container(
-              child: Text(this.cidade),
+              child: Text(
+                this.cidade,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               margin: EdgeInsets.all(80),
             ),
             SizedBox(
               height: 40,
             ),
-            Text(this.descricao)
+            Container(
+              child: Text(
+                this.descricao,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              margin: EdgeInsets.all(30),
+            ),
           ],
         ),
       ),
@@ -209,6 +232,7 @@ class DescricaoFoto extends StatelessWidget {
         child: Icon(
           Icons.arrow_back,
         ),
+        backgroundColor: Colors.green,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
