@@ -183,7 +183,7 @@ class TerceiraTela extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
