@@ -45,9 +45,16 @@ class PrimeiraRotaState extends State<PrimeiraRota> {
   }
 }
 
-class SegundaRota extends StatelessWidget {
+class SegundaRota extends StatefulWidget {
+  @override
+  State<SegundaRota> createState() => _SegundaRotaState();
+}
+
+class _SegundaRotaState extends State<SegundaRota> {
   TextEditingController num01Controller = TextEditingController();
+
   TextEditingController num02Controller = TextEditingController();
+
   String resposta = "";
 
   somar() {
